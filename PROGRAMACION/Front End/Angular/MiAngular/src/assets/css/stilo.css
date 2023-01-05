@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* esto lo que hace es pegar todo el contenido bien pegado al contorno de la pagina */
+}
+body{
+    font-family: "system-ui";
+}
+
+.contenedor{
+    padding: 60px 0 0; /*que cada section tenga espacio con la otra section, y nada hacia los costados*/
+    width: 90%;
+    max-width: 1000px;
+    margin: auto; /*al medio*/
+    overflow: hidden; /*si algo se sale del div, que lo esconda*/
+    padding-bottom: 40px;
+}
+.titulo{
+    color: #812754;
+    font-size: 30px;
+    text-align: center;
+    /*margin-bottom: 60px; /*para distinguirlo del contenido de cada section*/
+}
+header{
+    width: 100%;
+    height: 800px;
+    background: #bc4e9c;  /* fallback for old browsers */
+    background: linear-gradient(to right, #f807576b, #624ebcb4), url(../PasoApaso/imagenes2/perfil.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f807576b, #624ebcb4), url(../PasoApaso/imagenes2/perfil.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+nav {
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+nav > a{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px; /* los separa a uno de otro*/
+    padding-bottom: 20px;
+}
+
+nav > a:hover{
+    text-decoration: underline;/*cuando paso el mouse por encima(hover) se pone la linea*/
+}
+header .textos-header{
+    display: flex;
+    height: 420px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;/* para que se alineen*/
+    flex-direction: column; /*para cambiar la direccion, uno abajo del otro*/
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: #fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300; /*para que sea mas ligero*/
+    color: #fff;
+
+}
+.programa{
+    text-align: left;
+}
+
+.wave{/*como el header tiene position relative,le podemos poner absolute al wave*/
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.portafolio{
+    background: #f2f2f2;
+}
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /*si pasa de porcentaje se va*/
+}
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    /*height: 200px;*/
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0 0 0 0.5);
+
+}
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    transform: scale(0);
+    background: hsla(273, 91%, 27%, 0.7);
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cards1{
+    display: flex;
+    justify-content: space-evenly;
+}
+.clientes-contenedor1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.cards .card{
+    background: #86065b83;
+    display: flex;
+    width: 46%;
+    height:200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0 , 0, 0.6);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.cards1 .card1{
+    /*background: #4c068683;*/
+    display: flex;
+    width: 46%;
+    height:200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    /*box-shadow: 0 0 6px 0 rgba(0, 0 , 0, 0.6);*/
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+}
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+.cards1 .card1 img{
+    width: 25 0px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+
+}
+.cards1 .card1 > .contenido-texto-card{
+    width: 60%;
+    /*color: #fff;*/
+
+}
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+.cards1 .card1 > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.cards1 .card1 > .contenido-texto-card a{
+    padding-left: 10px;
+}
+
+.about-service{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+    padding-top: 0px;
+
+}
+.servicio-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.servicio-ind{
+    width: 28%; /*ya que son 3 y queremos distribuirlos de la misma forma*/
+    text-align: center;
+}
+.servicio-ind img{
+    width:90%;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+.servicio-ind p{
+    font-weight: 300;
+    text-align: center;
+}
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden; /* para que no se rompa la mqueta*/
+}
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly; 
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.content-foo{
+    text-align: center;
+
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #812754;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.content-foo p{
+    color: #ccc;
+}
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e979797;
+}
